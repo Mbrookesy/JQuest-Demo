@@ -8,7 +8,7 @@ public class Character extends Mortals {
 	public Character(String name) {
 		super(name);
 		setHp(20);
-		setAtt(10);
+		setAtt(5);
 		setDef(10);
 		setSpd(5);
 		setLvl(1);

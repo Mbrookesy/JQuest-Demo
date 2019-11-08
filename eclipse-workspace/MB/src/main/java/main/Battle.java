@@ -8,7 +8,7 @@ public class Battle {
 	public void battle(Scanner sc, Character mc) {
 		Random randomGen = new Random();
 		
-		boolean flee = false;
+		String condition = "";
 		
 		Monster mon = new Monster("Duck", 10, 5, 5, 3, 1);
 		
@@ -16,11 +16,16 @@ public class Battle {
 		
 		do {
 		int accuracy = 100;
-		System.out.println("What do you do? (Attack/Spells/Guard/Items/Flee)");
+		System.out.println("What do you do? (Input Number)");
+		System.out.println("1) Attack");
+		System.out.println("2) Spells");
+		System.out.println("3) Guard");
+		System.out.println("4) Items");
+		System.out.println("5) Flee");
 		System.out.println();
-		String action = sc.nextLine();
+		int action = sc.nextInt();
 		
-		if (action == "attack") {
+		if (action == 1) {
 			accuracy = randomGen.nextInt(100);
 			if (accuracy < 5) {
 				System.out.println("attack missed");
@@ -30,10 +35,19 @@ public class Battle {
 				System.out.println("The devil now has only " + mon.getHp() + "hp");
 			}
 			
+		} else if (action == 2) {
 			
+		} else if (action == 3) {
+			
+		} else if (action == 4) {
+			
+		} else if (action == 5) {
+			System.out.println(mc.getName() + " climbed on his bottle of pepsi max and used it as a rocket to flee");
+			System.out.println("");
+			condition = "flee";
 		}
 		
-		}while(mon.getHp() > 0 || mc.getHp() > 0 || flee == true);
+		}while(mon.getHp() > 0 || mc.getHp() > 0 || condition != "flee");
 		
 		
 	}
