@@ -9,6 +9,7 @@ public class Game {
 		Battle btl = new Battle();
 		Random randomGen = new Random();
 		int pass = 0;
+		String zone = "forest";
 		
 		System.out.println();
 		System.out.println("You begin to walk, press enter to continue walking");
@@ -18,7 +19,7 @@ public class Game {
 			System.out.println("Step...");
 			if (pass > 50) {
 				System.out.println("....!");
-				btl.battle(sc, mc);
+				btl.battle(sc, mc, zone);
 			}
 			System.out.println("...");
 			
