@@ -35,6 +35,7 @@ public class Battle {
 					mon.setHp(mon.getHp() - mc.getAtt());
 					System.out.println("The devil now has only " + mon.getHp() + "hp");
 				}
+				 
 
 			} else if (action == 2) {
 

@@ -9,7 +9,8 @@ public class App {
 		Scanner sc = new Scanner(System.in);
 		Start st = new Start();
 		Game games = new Game();
-
+		SpellBook spellbook = new SpellBook();
+		spellbook.createSpells();
 		Character mainChar = st.begin(sc);
 		games.standby(sc, mainChar);
 		
