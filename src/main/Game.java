@@ -1,11 +1,7 @@
-package main;
-
+package src.main;
 
 import java.util.Random;
 import java.util.Scanner;
-
-import main.Battle;
-import main.Character;
 
 public class Game {
 	

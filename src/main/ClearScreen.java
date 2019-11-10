@@ -1,4 +1,4 @@
-package main;
+package src.main;
 
 public class ClearScreen {
 	public static void clearScreen() {  

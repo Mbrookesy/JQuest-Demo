@@ -1,4 +1,4 @@
-package main;
+package src.main;
 
 public abstract class Mortals {
 	private String name;
