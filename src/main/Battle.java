@@ -1,11 +1,12 @@
 package src.main;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Battle {
 
-	public void battle(Scanner sc, Character mc, String zone) {
+	public void battle(Scanner sc, Character mc, String zone, ArrayList<SpellBuilder> spellbook) {
 		Random randomGen = new Random();
 		RandomMon ranmon = new RandomMon();
 		

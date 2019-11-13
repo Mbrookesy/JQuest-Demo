@@ -15,6 +15,10 @@ public class SpellBuilder {
 		this.setAccuracy(accuracy);
 		this.setLocked(locked);
 	}
+	
+	public SpellBuilder getSpell() {
+		return this;
+	}
 
 	public String getName() {
 		return name;

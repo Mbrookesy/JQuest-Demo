@@ -1,11 +1,12 @@
 package src.main;
 
+import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
 	
-	public void standby(Scanner sc, Character mc) {
+	public void standby(Scanner sc, Character mc, ArrayList<SpellBuilder> spellbook) {
 		Battle btl = new Battle();
 		Random randomGen = new Random();
 		int pass = 0;
@@ -19,7 +20,7 @@ public class Game {
 			System.out.println("Step...");
 			if (pass > 50) {
 				System.out.println("....!");
-				btl.battle(sc, mc, zone);
+				btl.battle(sc, mc, zone, spellbook);
 			}
 			System.out.println("...");
 			
