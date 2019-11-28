@@ -20,13 +20,19 @@ public class RandomMon {
 
 		switch (randomPick) {
 		case 0:
-			Monster duck = new Monster("Duck", 10, 2, 2, 3, 1);
+			Monster duck = new Monster("Duck", 10, 5, 2, 3, 1);
+			duck.setAttDesc(" squarked loudly");
+			duck.setMissDesc(" squarked at a random sign");
 			return duck;
 		case 1:
-			Monster chicken = new Monster("Chicken", 8, 3, 1, 3, 1);
+			Monster chicken = new Monster("Chicken", 8, 6, 1, 3, 1);
+			chicken.setAttDesc(" pecked you");
+			chicken.setMissDesc(" pecked a nearby tree");
 			return chicken;
 		case 2:
-			Monster pepsiJr = new Monster("Pepsi Jr ", 12, 3, 1, 5, 2);
+			Monster pepsiJr = new Monster("Pepsi Jr ", 12, 6, 1, 5, 2);
+			pepsiJr.setAttDesc(" spewed off-brand Pepsi at you");
+			pepsiJr.setMissDesc(" simply drank a bit of themself");
 			return pepsiJr;
 		}
 		return null;

@@ -20,7 +20,12 @@ public class Game {
 			System.out.println("Step...");
 			if (pass > 50) {
 				System.out.println("....!");
-				btl.battle(sc, mc, zone, spellbook);
+				String status = btl.battle(sc, mc, zone, spellbook);
+				if(status == "Death") {
+					System.out.println("Game over.. please try start over");
+					System.exit(0);
+				}
+				
 			}
 			System.out.println("...");
 			

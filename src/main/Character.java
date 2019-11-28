@@ -5,13 +5,14 @@ public class Character extends Mortals {
 	private int mana;
 	private int currentXP;
 	private int maxXP;
+
 	
 	public Character(String name) {
 		super(name);
 		setHp(20);
 		setMana(10);
 		setAtt(5);
-		setDef(10);
+		setDef(5);
 		setSpd(5);
 		setLvl(1);
 		setCurrentXP(0);

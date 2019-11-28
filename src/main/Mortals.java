@@ -1,5 +1,7 @@
 package src.main;
 
+import java.util.Random;
+
 public abstract class Mortals {
 	private String name;
 	private int hp;
@@ -7,6 +9,8 @@ public abstract class Mortals {
 	private int def;
 	private int spd;
 	private int lvl;
+	
+	Random randomGen = new Random();
 	
 	public Mortals(String name) {
 		super();
@@ -61,6 +65,17 @@ public abstract class Mortals {
 	public void setSpd(int spd) {
 		this.spd = spd;
 	}
+	
+	public int attackRange(int range) {
+		if (range == 1) {
+			return att - 1;
+		} else if (range == 2) {
+			return att;
+		} else {
+			return att + 1;
+		}
+	}
+
 	
 	
 
