@@ -2,6 +2,8 @@ package src.main;
 
 import java.util.Scanner;
 
+import src.mortals.Character;
+
 public class Start {
 
 	public Character begin(Scanner sc) {

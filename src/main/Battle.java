@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+import src.mortals.Character;
+import src.mortals.Monster;
+import src.mortals.RandomMon;
+import src.spells.SpellBuilder;
+
 public class Battle {
 
 	public String battle(Scanner sc, Character mc, String zone, ArrayList<SpellBuilder> spellbook) {
@@ -17,6 +22,7 @@ public class Battle {
 		System.out.println("A lvl " + mon.getLvl() + " " + mon.getName() + " has materialised");
 
 		do {
+			boolean guard = false;
 			int accuracy = 100;
 			System.out.println("What do you do? (Input Number)");
 			System.out.println("1) Attack");
@@ -43,7 +49,8 @@ public class Battle {
 			} else if (action == 2) {
 
 			} else if (action == 3) {
-
+				System.out.println(mc.getName() + " braces for impact");
+				guard = true;
 			} else if (action == 4) {
 
 			} else if (action == 5) {
@@ -60,11 +67,17 @@ public class Battle {
 				if (accuracy < 5) {
 					System.out.println("The " + mon.getName() + mon.getMissDesc() + " missing their chance of attack!");
 				} else {
-					System.out.println("The " + mon.getName() + mon.getAttDesc() + " and did " + (mon.attackRange(range2) - (mc.getDef() / 2)) + " damage!");
-					mc.setHp(mc.getHp() - (mon.attackRange(range2) - (mc.getDef() / 2)));
+					if (guard == true) {
+						System.out.println("The " + mon.getName() + mon.getAttDesc() + " and did " + (mon.attackRange(range2) - mc.getDef()) + " damage!");
+						mc.setHp(mc.getHp() - (mon.attackRange(range2) - mc.getDef()));
+					}	else	{
+						System.out.println("The " + mon.getName() + mon.getAttDesc() + " and did " + (mon.attackRange(range2) - (mc.getDef() / 2)) + " damage!");
+						mc.setHp(mc.getHp() - (mon.attackRange(range2) - (mc.getDef() / 2)));
+					}
 				}
 				System.out.println("You now have only " + mc.getHp() + "hp");
 			}
+			
 			
 			if (mc.getHp() <= 0) {
 				System.out.println("You start feel dizzy and suddenly... collapse");

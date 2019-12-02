@@ -1,4 +1,4 @@
-package src.main;
+package src.mortals;
 
 import java.util.Random;
 

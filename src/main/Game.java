@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+import src.mortals.Character;
+import src.spells.SpellBuilder;
+
 public class Game {
 	
 	public void standby(Scanner sc, Character mc, ArrayList<SpellBuilder> spellbook) {

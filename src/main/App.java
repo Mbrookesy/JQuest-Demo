@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+import src.mortals.Character;
+import src.spells.SpellBook;
+import src.spells.SpellBuilder;
+
 public class App {
 
 	public static void main(String[] args) {

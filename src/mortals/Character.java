@@ -1,4 +1,4 @@
-package src.main;
+package src.mortals;
 
 public class Character extends Mortals {
 	
