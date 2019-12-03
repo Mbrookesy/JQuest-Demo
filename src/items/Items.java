@@ -3,10 +3,11 @@ package src.items;
 public class Items {
 	private int id;
 	private String name;
-	private String quantity;
+	private int quantity;
 	private String desc;
+	private String type;
 	
-	public Items(int id, String name, String quantity, String desc) {
+	public Items(int id, String name, int quantity, String desc, String type) {
 		this.setName(name);
 		this.setId(id);
 		this.setQuantity(quantity);
@@ -29,11 +30,11 @@ public class Items {
 		this.name = name;
 	}
 
-	public String getQuantity() {
+	public int getQuantity() {
 		return quantity;
 	}
 
-	public void setQuantity(String quantity) {
+	public void setQuantity(int quantity) {
 		this.quantity = quantity;
 	}
 
@@ -43,6 +44,14 @@ public class Items {
 
 	public void setDesc(String desc) {
 		this.desc = desc;
+	}
+
+	public String getType() {
+		return type;
+	}
+
+	public void setType(String type) {
+		this.type = type;
 	}
 	
 }

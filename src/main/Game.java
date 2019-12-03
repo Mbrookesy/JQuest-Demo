@@ -4,12 +4,13 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+import src.items.Items;
 import src.mortals.Character;
 import src.spells.SpellBuilder;
 
 public class Game {
 	
-	public void standby(Scanner sc, Character mc, ArrayList<SpellBuilder> spellbook) {
+	public void standby(Scanner sc, Character mc, ArrayList<SpellBuilder> spellbook, ArrayList<Items> inventory) {
 		Battle btl = new Battle();
 		Random randomGen = new Random();
 		int pass = 0;
@@ -23,7 +24,7 @@ public class Game {
 			System.out.println("Step...");
 			if (pass > 50) {
 				System.out.println("....!");
-				String status = btl.battle(sc, mc, zone, spellbook);
+				String status = btl.battle(sc, mc, zone, spellbook, inventory);
 				if(status == "Death") {
 					System.out.println("Game over.. please try start over");
 					System.exit(0);

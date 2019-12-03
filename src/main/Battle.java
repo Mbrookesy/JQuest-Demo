@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+import src.items.Items;
 import src.mortals.Character;
 import src.mortals.Monster;
 import src.mortals.RandomMon;
@@ -11,7 +12,7 @@ import src.spells.SpellBuilder;
 
 public class Battle {
 
-	public String battle(Scanner sc, Character mc, String zone, ArrayList<SpellBuilder> spellbook) {
+	public String battle(Scanner sc, Character mc, String zone, ArrayList<SpellBuilder> spellbook, ArrayList<Items> inventory) {
 		Random randomGen = new Random();
 		RandomMon ranmon = new RandomMon();
 		
@@ -47,6 +48,7 @@ public class Battle {
 				}
 				 
 			} else if (action == 2) {
+				System.out.println("Current spells:");
 
 			} else if (action == 3) {
 				System.out.println(mc.getName() + " braces for impact");
