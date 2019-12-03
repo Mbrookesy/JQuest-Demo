@@ -6,3 +6,4 @@ JQuest is a simple turn based rpg featuring the adventures of a man named Jordan
 - Increased Item diversity
 - Minor bug fixes
 
+See previous patch notes here: https://github.com/Mbrookesy/JQuest/blob/master/PreviousPatches.md
