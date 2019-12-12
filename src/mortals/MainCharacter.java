@@ -1,13 +1,13 @@
 package src.mortals;
 
-public class Character extends Mortals {
+public class MainCharacter extends Mortals {
 	
 	private int mana;
 	private int currentXP;
 	private int maxXP;
 
 	
-	public Character(String name) {
+	public MainCharacter(String name) {
 		super(name);
 		setHp(20);
 		setMana(10);

@@ -2,18 +2,23 @@ package src.spells;
 
 public class SpellBuilder {
 	
+	private int id;
 	private String name;
 	private int manaCost;
 	private int damage;
 	private int accuracy;
-	private String locked;
 	
-	public SpellBuilder(String name, int manaCost, int damage, int accuracy, String locked) {
+	public SpellBuilder(int id, String name, int manaCost, int damage, int accuracy) {
+		this.setId(id);
 		this.setName(name);
 		this.setManaCost(manaCost);
 		this.setDamage(damage);
 		this.setAccuracy(accuracy);
-		this.setLocked(locked);
+	}
+	
+	@Override
+	public String toString() {
+		return this.getId() + " " + this.getName() + "\n";
 	}
 	
 	public SpellBuilder getSpell() {
@@ -52,11 +57,12 @@ public class SpellBuilder {
 		this.accuracy = accuracy;
 	}
 
-	public String getLocked() {
-		return locked;
+	public int getId() {
+		return id;
 	}
 
-	public void setLocked(String locked) {
-		this.locked = locked;
+	public void setId(int id) {
+		this.id = id;
 	}
+
 }

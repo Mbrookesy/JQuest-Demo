@@ -4,13 +4,14 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
+import src.battle.Battle;
 import src.items.Items;
-import src.mortals.Character;
+import src.mortals.MainCharacter;
 import src.spells.SpellBuilder;
 
 public class Game {
 	
-	public void standby(Scanner sc, Character mc, ArrayList<SpellBuilder> spellbook, ArrayList<Items> inventory) {
+	public void standby(Scanner sc, MainCharacter mc, ArrayList<SpellBuilder> spellbook, ArrayList<Items> inventory) {
 		Battle btl = new Battle();
 		Random randomGen = new Random();
 		int pass = 0;

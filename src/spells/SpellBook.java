@@ -3,21 +3,24 @@ package src.spells;
 import java.util.ArrayList;
 
 public class SpellBook {
-	
+	ArrayList<SpellBuilder> spellbook = new ArrayList<SpellBuilder>();
 	public ArrayList<SpellBuilder> startingSpells() {
-		ArrayList<SpellBuilder> spellbook = new ArrayList<SpellBuilder>();
+		
 		spellbook.add(pepsiShaker);
 		spellbook.add(beardStroker);
-
 		return spellbook;
 	}
 	
 	public SpellBuilder castSpell(int choice) {
 		return null;
-
-}
-	SpellBuilder pepsiShaker = new SpellBuilder("Pepsi Shaker", 2, 8, 80, "NO");
-	SpellBuilder beardStroker = new SpellBuilder("Beard Stroker", 3, 10, 90, "NO");
-	SpellBuilder penThrower = new SpellBuilder("Pen Thrower", 5, 15, 80, "YES");
+	}
+	
+	public ArrayList<SpellBuilder> getSpellBook() {
+		return spellbook;
+	}
+		
+	SpellBuilder pepsiShaker = new SpellBuilder(1,"Pepsi Shaker", 2, 8, 80);
+	SpellBuilder beardStroker = new SpellBuilder(2,"Beard Stroker", 3, 10, 90);
+	SpellBuilder penThrower = new SpellBuilder(3,"Pen Thrower", 5, 15, 80);
 	
 }
