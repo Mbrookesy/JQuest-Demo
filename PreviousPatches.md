@@ -1,3 +1,8 @@
+# Patch Notes V0.11
+- Implemented Guard action, allowing you to increase your defense by one turn against attacks
+- Increased Item diversity
+- Minor bug fixes
+
 # Patch Notes V0.1
 - Enabled Monsters to fight back and do damage to Jordan.
 - Added death which ends the game once hp reaches 0.
