@@ -1,7 +1,7 @@
 # JQUEST
 JQuest is a simple turn based rpg featuring the adventures of a man named Jordan with a Pepsi Addiction.
 
-# Patch Notes V0.12
+# Patch Notes V0.1.2
 - Added ability to cast spells onto enemies
 - Ability to view spellbook before casting added
 
