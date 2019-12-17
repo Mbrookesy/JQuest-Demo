@@ -1,4 +1,4 @@
-# Patch Notes V0.11
+# Patch Notes V0.1.1
 - Implemented Guard action, allowing you to increase your defense by one turn against attacks
 - Increased Item diversity
 - Minor bug fixes
