@@ -1,3 +1,7 @@
+# Patch Notes V0.2.1
+- Added ability to cast spells onto enemies
+- Ability to view spellbook before casting added
+
 # Patch Notes V0.2.0
 - Implemented Guard action, allowing you to increase your defense by one turn against attacks
 - Increased Item diversity
