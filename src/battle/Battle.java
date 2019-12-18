@@ -67,7 +67,7 @@ public class Battle {
 				return "Death";
 			}
 
-		} while (mon.getHp() > 0 && mc.getHp() > 0 && condition == "Flee");
+		} while (mon.getHp() > 0 && mc.getHp() > 0 && condition != "Flee");
 		if (condition == "Flee") {
 			return "Flee";
 		}
