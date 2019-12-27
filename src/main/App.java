@@ -14,15 +14,29 @@ public class App {
 
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
+		Menu menu = new Menu();
 		Start st = new Start();
 		Game games = new Game();
 		SpellBook sb = new SpellBook();
 		Inventory inv = new Inventory();
 		
-		ArrayList<Items> inventory = inv.createBag();
-		ArrayList<SpellBuilder> spellbook = sb.startingSpells();
-		MainCharacter mainChar = st.begin(sc);
-		games.standby(sc, mainChar, spellbook, inventory);
+		String choice = menu.menuScreen(sc);
+		if (choice == "1") {
+			ArrayList<Items> inventory = inv.createBag();
+			ArrayList<SpellBuilder> spellbook = sb.startingSpells();
+			MainCharacter mainChar = st.begin(sc);
+			games.standby(sc, mainChar, spellbook, inventory);
+		} else if (choice == "2") {
+			System.out.println("Feature to be added in the future");
+		} else if (choice == "3") {
+			System.out.println("Feature to be added in the future");
+		} else if (choice == "4") {
+			System.out.println("Feature to be added in the future");
+		} else {
+			System.exit(0);
+		}
+		
+		
 		
 		
 

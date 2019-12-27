@@ -28,7 +28,8 @@ public class Game {
 				String status = btl.battle(sc, mc, zone, spellbook, inventory);
 				if(status == "Death") {
 					System.out.println("Game over.. please try start over");
-					System.exit(0);
+					String[] args = {};
+					App.main(args);
 				}
 				
 			}
