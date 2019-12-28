@@ -1,3 +1,11 @@
+
+# Patch Notes V0.3.0
+- Fixed bug where name would always be Jordan even before naming the character
+- Added new Menu to start game as well as displaying features which will be added in the future
+
+# Patch Notes V0.2.2
+- Fixed bug where it would leave the battle after every action
+
 # Patch Notes V0.2.1
 - Added ability to cast spells onto enemies
 - Ability to view spellbook before casting added
