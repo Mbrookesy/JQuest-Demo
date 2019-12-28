@@ -19,8 +19,10 @@ public class App {
 		Game games = new Game();
 		SpellBook sb = new SpellBook();
 		Inventory inv = new Inventory();
-		
-		String choice = menu.menuScreen(sc);
+		Credits credit = new Credits();
+		String choice;
+		do {
+		choice = menu.menuScreen(sc);
 		if (choice == "1") {
 			ArrayList<Items> inventory = inv.createBag();
 			ArrayList<SpellBuilder> spellbook = sb.startingSpells();
@@ -31,15 +33,12 @@ public class App {
 		} else if (choice == "3") {
 			System.out.println("Feature to be added in the future");
 		} else if (choice == "4") {
-			System.out.println("Feature to be added in the future");
+			credit.credits(sc);
 		} else {
 			System.exit(0);
 		}
-		
-		
-		
-		
+	}while(choice != null);
 
 	}
-
 }
+
