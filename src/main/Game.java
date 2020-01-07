@@ -3,6 +3,7 @@ package src.main;
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
 import src.battle.Battle;
 import src.items.Items;
@@ -23,6 +24,12 @@ public class Game {
 		do {
 			pass = randomGen.nextInt(100);
 			System.out.println("Step...");
+			
+			try {
+				TimeUnit.SECONDS.sleep(1);
+			} catch (InterruptedException e) {
+				System.out.println("Tripped!");
+			}
 			if (pass > 50) {
 				System.out.println("....!");
 				String status = btl.battle(sc, mc, zone, spellbook, inventory);
