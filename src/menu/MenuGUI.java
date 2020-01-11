@@ -13,11 +13,9 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
-import src.handlers.MenuHandler;
 
 
-
-public class Menu {
+public class MenuGUI {
 	//Menu Panels
 	JPanel titleNamePanel;
 	JPanel ButtonPanel;

@@ -5,21 +5,21 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JFrame;
 
-import src.forest.ForestStart;
+import src.forest.ForestHandler;
+import src.forest.ForestStartGUI;
 import src.forest.ForestVisibilityManager;
-import src.handlers.ForestHandler;
-import src.handlers.MenuHandler;
-import src.menu.Menu;
-import src.menu.VisibilityManager;
+import src.menu.MenuGUI;
+import src.menu.MenuHandler;
+import src.menu.MenuVisibilityManager;
 
 public class LoadAllComps {
 	
 	
 	public void start() {
-		Menu menu = new Menu();
-		ForestStart start = new ForestStart();
+		MenuGUI menu = new MenuGUI();
+		ForestStartGUI start = new ForestStartGUI();
 		
-		VisibilityManager vm = new VisibilityManager(menu, start);
+		MenuVisibilityManager vm = new MenuVisibilityManager(menu, start);
 		ForestVisibilityManager fvm = new ForestVisibilityManager(start);
 		
 		MenuHandler mHandler = new MenuHandler(vm, fvm);

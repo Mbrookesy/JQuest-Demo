@@ -1,14 +1,14 @@
 package src.menu;
 
-import src.forest.ForestStart;
+import src.forest.ForestStartGUI;
 
-public class VisibilityManager {
+public class MenuVisibilityManager {
 	
-	Menu menu;
-	ForestStart start;
+	MenuGUI menu;
+	ForestStartGUI start;
 	
 	
-	public VisibilityManager(Menu userMenu, ForestStart startingScreen) {
+	public MenuVisibilityManager(MenuGUI userMenu, ForestStartGUI startingScreen) {
 		menu = userMenu;
 		start = startingScreen;
 	}
