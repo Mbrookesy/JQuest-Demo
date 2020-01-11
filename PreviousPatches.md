@@ -1,3 +1,7 @@
+# Patch Notes ALPHA V0.1
+- Project moved to Alpha Stage
+- Project Overhall, game now is played with GUI instead of simply a console
+- Reintroduced the game menu and starting text
 
 # Patch Notes PRE ALPHA V0.3.1
 - Added credits.
