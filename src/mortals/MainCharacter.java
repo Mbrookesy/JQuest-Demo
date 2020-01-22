@@ -5,6 +5,8 @@ public class MainCharacter extends Mortals {
 	private int mana;
 	private int currentXP;
 	private int maxXP;
+	private int cola;
+	private int moral;
 
 	
 	public MainCharacter(String name) {
@@ -15,6 +17,8 @@ public class MainCharacter extends Mortals {
 		setDef(5);
 		setSpd(5);
 		setLvl(1);
+		setCola(3);
+		setMoral(50);
 		setCurrentXP(0);
 		setMaxXP(getLvl() * 20 + 30);
 	}
@@ -41,6 +45,22 @@ public class MainCharacter extends Mortals {
 
 	public void setMana(int mana) {
 		this.mana = mana;
+	}
+
+	public int getCola() {
+		return cola;
+	}
+
+	public void setCola(int cola) {
+		this.cola = cola;
+	}
+
+	public int getMoral() {
+		return moral;
+	}
+
+	public void setMoral(int moral) {
+		this.moral = moral;
 	}
 
 

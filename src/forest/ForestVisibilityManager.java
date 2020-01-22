@@ -1,61 +1,36 @@
 package src.forest;
 
-import src.forest.ForestStartGUI;
+import java.awt.Color;
+
+import javax.swing.JFrame;
+
+import src.main.GameGUI;
+import src.main.LoadAllComps;
 
 public class ForestVisibilityManager {
-	ForestStartGUI fstart;
+	GameGUI gstart;
+	JFrame windowscreen;
 	
-	
-	public ForestVisibilityManager(ForestStartGUI startingScreen) {
-		fstart = startingScreen;
+	public ForestVisibilityManager(GameGUI gamingScreen, JFrame window) {
+		gstart = gamingScreen;
+		windowscreen = window;
 	}
 	
-	public void hideForest() {
-		fstart.continueButtonPanel.setVisible(false);
-		fstart.startPanel.setVisible(false);
-		fstart.namePanel.setVisible(false);
-	}
-	
-	public void showForestBegin() {
-		fstart.continueButtonPanel.setVisible(true);
-		fstart.continueButton.setVisible(true);
-		fstart.noButton.setVisible(false);
-		fstart.yesButton.setVisible(false);
-		fstart.startPanel.setVisible(true);
-	}
-	
-	public void showNameField() {
-		fstart.namePanel.setVisible(true);
-		fstart.characterNameArea.requestFocusInWindow();
-	}
-	
-	public void hideNameField() {
-		fstart.namePanel.setVisible(false);
-	}
-	
-	public void showYesNo() {
-		fstart.continueButton.setVisible(false);
-		fstart.noButton.setVisible(true);
-		fstart.yesButton.setVisible(true);
-	}
-	
-	public void showContinue() {
-		fstart.continueButton.setVisible(true);
-		fstart.noButton.setVisible(false);
-		fstart.yesButton.setVisible(false);
-	}
-	
-	public void ChangeText(String displayText, String nextCall) {
-		fstart.startArea.setText(displayText);
-		fstart.continueButton.setActionCommand(nextCall);
-	}
-	
-	public String getName() {
-		return fstart.characterNameArea.getText();
-	}
-	
-	public void wakeUpButton() {
-		fstart.continueButton.setText("Wake Up");
+	public void firstEnteringForest() {
+		String forestBg = "#405242";
+		
+		gstart.getStartPanel().setBackground(Color.decode(forestBg));
+		gstart.getNamePanel().setBackground(Color.decode(forestBg));
+		gstart.getContinueButtonPanel().setBackground(Color.decode(forestBg));
+		gstart.getStartArea().setBackground(Color.decode(forestBg));
+		gstart.getContinueButton().setBackground(Color.decode(forestBg));
+		windowscreen.getContentPane().setBackground(Color.decode(forestBg));
+
+		gstart.getContinueButton().removeActionListener(LoadAllComps.getHandlers().get(1));
+		gstart.getContinueButton().addActionListener(LoadAllComps.getHandlers().get(3));
+		gstart.getContinueButton().setActionCommand("C1");
+		gstart.getContinueButton().setText(">");
+		gstart.getStartArea().setText("You open your eyes in the middle of a deserted forest");
 	}
 
 }

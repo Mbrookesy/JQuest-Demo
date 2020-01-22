@@ -1,10 +1,9 @@
-package src.battle;
+package src.battletemp;
 
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.Scanner;
 
-import src.items.Items;
 import src.mortals.MainCharacter;
 import src.mortals.Monster;
 import src.mortals.RandomMon;
@@ -12,13 +11,12 @@ import src.spells.SpellBuilder;
 
 public class Battle {
 
-	public String battle(Scanner sc, MainCharacter mc, String zone, ArrayList<SpellBuilder> spellbook, ArrayList<Items> inventory) {
+	public String battle(Scanner sc, MainCharacter mc, String zone, ArrayList<SpellBuilder> spellbook) {
 		Random randomGen = new Random();
 		RandomMon ranmon = new RandomMon();
 		Attack att = new Attack();
 		Flee flee = new Flee();
 		Guard grd = new Guard();
-		Inventory inv = new Inventory();
 		Spell spll = new Spell();
 		EnemyAttack monAtt = new EnemyAttack();
 		

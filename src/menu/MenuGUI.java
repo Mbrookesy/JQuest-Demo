@@ -22,7 +22,7 @@ public class MenuGUI {
 	JLabel titleNameLabel;
 	Font titleFont = new Font("Courier", Font.BOLD, 90);
 	Font buttonFont = new Font("Courier", Font.PLAIN, 30);
-	JButton newGameButton, loadGameButton, helpButton, creditsButton, exitButton;
+	JButton newGameButton, loadGameButton, helpButton, creditsButton, exitButton, battleButton;
 	
 	JButton backButton;
 	
@@ -36,7 +36,7 @@ public class MenuGUI {
 	JTextArea tempTextArea;
 
 	
-	public void menuScreen(JFrame window, MenuHandler mHandler) {
+	public void menuScreen(JFrame window, ActionListener menuHandler) {
 		
 		//Menu
 		
@@ -55,7 +55,7 @@ public class MenuGUI {
 		newGameButton.setBackground(Color.black);
 		newGameButton.setForeground(Color.white);
 		newGameButton.setFont(buttonFont);
-		newGameButton.addActionListener(mHandler);
+		newGameButton.addActionListener(menuHandler);
 		newGameButton.setActionCommand("New Game");
 		newGameButton.setFocusPainted(false);
 		
@@ -63,7 +63,7 @@ public class MenuGUI {
 		loadGameButton.setBackground(Color.black);
 		loadGameButton.setForeground(Color.white);
 		loadGameButton.setFont(buttonFont);
-		loadGameButton.addActionListener(mHandler);
+		loadGameButton.addActionListener(menuHandler);
 		loadGameButton.setActionCommand("Load Game");
 		loadGameButton.setFocusPainted(false);
 		
@@ -71,7 +71,7 @@ public class MenuGUI {
 		helpButton.setBackground(Color.black);
 		helpButton.setForeground(Color.white);
 		helpButton.setFont(buttonFont);
-		helpButton.addActionListener(mHandler);
+		helpButton.addActionListener(menuHandler);
 		helpButton.setActionCommand("Help");
 		helpButton.setFocusPainted(false);
 		
@@ -79,7 +79,7 @@ public class MenuGUI {
 		creditsButton.setBackground(Color.black);
 		creditsButton.setForeground(Color.white);
 		creditsButton.setFont(buttonFont);
-		creditsButton.addActionListener(mHandler);
+		creditsButton.addActionListener(menuHandler);
 		creditsButton.setActionCommand("Credits");
 		creditsButton.setFocusPainted(false);
 		
@@ -87,7 +87,7 @@ public class MenuGUI {
 		exitButton.setBackground(Color.black);
 		exitButton.setForeground(Color.white);
 		exitButton.setFont(buttonFont);
-		exitButton.addActionListener(mHandler);
+		exitButton.addActionListener(menuHandler);
 		exitButton.setActionCommand("Exit");
 		exitButton.setFocusPainted(false);
 		
@@ -132,7 +132,7 @@ public class MenuGUI {
 		backButton.setBackground(Color.black);
 		backButton.setForeground(Color.white);
 		backButton.setFont(buttonFont);
-		backButton.addActionListener(mHandler);
+		backButton.addActionListener(menuHandler);
 		backButton.setActionCommand("Back");
 		
 		creditButtonPanel.add(backButton);
@@ -164,7 +164,7 @@ public class MenuGUI {
 		backButton.setBackground(Color.black);
 		backButton.setForeground(Color.white);
 		backButton.setFont(buttonFont);
-		backButton.addActionListener(mHandler);
+		backButton.addActionListener(menuHandler);
 		backButton.setActionCommand("Back");
 		
 		tempButtonPanel.add(backButton);

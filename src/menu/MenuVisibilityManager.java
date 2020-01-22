@@ -1,16 +1,14 @@
 package src.menu;
 
-import src.forest.ForestStartGUI;
+import src.main.GameGUI;
 
 public class MenuVisibilityManager {
 	
 	MenuGUI menu;
-	ForestStartGUI start;
 	
 	
-	public MenuVisibilityManager(MenuGUI userMenu, ForestStartGUI startingScreen) {
+	public MenuVisibilityManager(MenuGUI userMenu) {
 		menu = userMenu;
-		start = startingScreen;
 	}
 
 	public void showTitleScreen() {	

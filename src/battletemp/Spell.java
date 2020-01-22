@@ -1,4 +1,4 @@
-package src.battle;
+package src.battletemp;
 
 import java.util.ArrayList;
 import java.util.Scanner;
