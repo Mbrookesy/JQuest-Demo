@@ -1,3 +1,6 @@
+# Patch Notes ALPHA V0.2
+- Finished starting area of forest with decision making and inputs availiable
+
 # Patch Notes ALPHA V0.1
 - Project moved to Alpha Stage
 - Project Overhall, game now is played with GUI instead of simply a console
