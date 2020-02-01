@@ -150,7 +150,7 @@ public class MenuGUI {
 		tempButtonPanel.setBounds(200, 400, 400, 200);
 		tempButtonPanel.setBackground(Color.black);
 		
-		tempTextArea = new JTextArea("Feature to be added in the Future");
+		tempTextArea = new JTextArea("Not Availiable in Java Swing \nVersion");
 		tempTextArea.setBounds(100, 100, 600, 250);
 		tempTextArea.setBackground(Color.black);
 		tempTextArea.setForeground(Color.white);

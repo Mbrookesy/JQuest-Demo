@@ -8,6 +8,7 @@ import javax.swing.JFrame;
 import src.battle.BattleGUI;
 import src.battle.BattleHandler;
 import src.battle.BattleVisibilityManager;
+import src.battle.SpellsGUI;
 import src.forest.ForestHandler;
 import src.forest.ForestMonster;
 import src.forest.ForestVisibilityManager;
@@ -33,6 +34,7 @@ public class LoadAllComps {
 		MenuGUI menu = new MenuGUI();
 		GameGUI fullgame = new GameGUI();
 		BattleGUI battle = new BattleGUI();
+		SpellsGUI spells = new SpellsGUI();
 		
 		CreateWindow cw = new CreateWindow();
 		
@@ -40,7 +42,7 @@ public class LoadAllComps {
 		
 		MenuVisibilityManager vm = new MenuVisibilityManager(menu); 
 		MainVisibilityManager ngvm = new MainVisibilityManager(fullgame); 
-		BattleVisibilityManager bvm = new BattleVisibilityManager(fullgame, battle, window); 
+		BattleVisibilityManager bvm = new BattleVisibilityManager(fullgame, battle, window, spells); 
 		ForestVisibilityManager fvm = new ForestVisibilityManager(fullgame, window); 
 		
 		ForestMonster fmon = new ForestMonster();
@@ -56,11 +58,13 @@ public class LoadAllComps {
 		
 		menu.menuScreen(window, getHandlers().get(0));
 		fullgame.begin(window, getHandlers());
-		battle.Battle(window, getHandlers());
+		battle.Battle(window, getHandlers().get(2));
+		spells.Battle(window, getHandlers().get(2));
 		
 		vm.showTitleScreen();
 		ngvm.hide();
 		bvm.hideall();
+		
 	}
 	
 	

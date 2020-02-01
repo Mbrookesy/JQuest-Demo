@@ -18,7 +18,11 @@ public class SpellBuilder {
 	
 	@Override
 	public String toString() {
-		return this.getId() + " " + this.getName() + "\n";
+		return this.getName() + " Cost: " + this.getManaCost() + "JP Damage: " + this.getDamage() + " Accuracy: " + this.getAccuracy() + "%";
+	}
+	
+	public String selectionSpell() {
+		return "You have selected: " + this.getName();
 	}
 	
 	public SpellBuilder getSpell() {

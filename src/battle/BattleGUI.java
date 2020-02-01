@@ -19,17 +19,17 @@ import src.mortals.MainCharacter;
 public class BattleGUI {
 	//Menu Panels
 	JPanel titleNamePanel;
-	JPanel ButtonPanel, DescPanel, HPPanel, MPPanel, ColaPanel, EnemyPanel, MoralPanel;
-	JLabel HPLabel, MPLabel, ColaLabel, MoralLabel;
+	JPanel ButtonPanel, DescPanel, HPPanel, MPPanel, EnemyPanel;
+	JLabel HPLabel, MPLabel, ColaLabel;
 	Font statFont = new Font("Courier", Font.BOLD, 25);
 	Font buttonFont = new Font("Courier", Font.PLAIN, 18);
-	JButton attackButton, spellsButton, drinkButton, complimentButton, insultButton;	
+	JButton attackButton, spellsButton, drinkButton;
 	JTextArea desc;
 	
-	public void Battle(JFrame window, ArrayList<ActionListener> handlers) {
+	public void Battle(JFrame window, ActionListener handler) {
 		
 		DescPanel = new JPanel();
-		DescPanel.setBounds(300, 330, 400, 125);
+		DescPanel.setBounds(300, 380, 400, 125);
 		DescPanel.setBackground(Color.black);
 		DescPanel.setBorder(BorderFactory.createLineBorder(Color.white));
 		
@@ -50,15 +50,6 @@ public class BattleGUI {
 		EnemyPanel.setBounds(375, 200, 50, 50);
 		EnemyPanel.setBackground(Color.red);
 		
-		MoralPanel = new JPanel();
-		MoralPanel.setBounds(300, 480, 400, 50);
-		MoralPanel.setBackground(Color.black);
-		MoralPanel.setBorder(BorderFactory.createLineBorder(Color.white));
-		MoralLabel = new JLabel("MORAL: " + LoadChar.mainChar.getMoral());
-		MoralLabel.setFont(statFont);
-		MoralLabel.setForeground(Color.white);
-		MoralPanel.add(MoralLabel);
-		
 		HPPanel = new JPanel();
 		HPPanel.setBounds(100, 50, 100, 50);
 		HPPanel.setBackground(Color.black);
@@ -69,83 +60,43 @@ public class BattleGUI {
 		
 		
 		MPPanel = new JPanel();
-		MPPanel.setBounds(350, 50, 100, 50);
+		MPPanel.setBounds(575, 50, 150, 50);
 		MPPanel.setBackground(Color.black);
 		MPLabel = new JLabel("JP: " + LoadChar.mainChar.getMana());
 		MPLabel.setFont(statFont);
 		MPLabel.setForeground(Color.white);
 		MPPanel.add(MPLabel);
 		
-		ColaPanel = new JPanel();
-		ColaPanel.setBounds(575, 50, 150, 50);
-		ColaPanel.setBackground(Color.black);
-		ColaLabel = new JLabel("Cola: " + LoadChar.mainChar.getCola());
-		ColaLabel.setFont(statFont);
-		ColaLabel.setForeground(Color.white);
-		ColaPanel.add(ColaLabel);
-		
 		ButtonPanel = new JPanel();
-		ButtonPanel.setBounds(100, 325, 200, 225);
+		ButtonPanel.setBounds(100, 375, 200, 225);
 		ButtonPanel.setBackground(Color.black);
 		
 		attackButton = new JButton("Melee");
 		attackButton.setBackground(Color.black);
 		attackButton.setForeground(Color.white);
 		attackButton.setFont(buttonFont);
-		attackButton.addActionListener(handlers.get(2));
-		attackButton.setActionCommand("New Game");
-		attackButton.setPreferredSize(new Dimension(150, 36));
+		attackButton.addActionListener(handler);
+		attackButton.setActionCommand("Melee");
+		attackButton.setPreferredSize(new Dimension(150, 50));
 		attackButton.setFocusPainted(false);
 		
 		spellsButton = new JButton("Spells");
 		spellsButton.setBackground(Color.black);
 		spellsButton.setForeground(Color.white);
 		spellsButton.setFont(buttonFont);
-		spellsButton.addActionListener(handlers.get(2));
-		spellsButton.setActionCommand("Load Game");
-		spellsButton.setPreferredSize(new Dimension(150, 36));
+		spellsButton.addActionListener(handler);
+		spellsButton.setActionCommand("Spells");
+		spellsButton.setPreferredSize(new Dimension(150, 50));
 		spellsButton.setFocusPainted(false);
-		
-		drinkButton = new JButton("Drink");
-		drinkButton.setBackground(Color.black);
-		drinkButton.setForeground(Color.white);
-		drinkButton.setFont(buttonFont);
-		drinkButton.addActionListener(handlers.get(2));
-		drinkButton.setActionCommand("Help");
-		drinkButton.setPreferredSize(new Dimension(150, 36));
-		drinkButton.setFocusPainted(false);
-		
-		complimentButton = new JButton("Compliment");
-		complimentButton.setBackground(Color.black);
-		complimentButton.setForeground(Color.white);
-		complimentButton.setFont(buttonFont);
-		complimentButton.addActionListener(handlers.get(2));
-		complimentButton.setActionCommand("Credits");
-		complimentButton.setPreferredSize(new Dimension(150, 36));
-		complimentButton.setFocusPainted(false);
-		
-		insultButton = new JButton("Insult");
-		insultButton.setBackground(Color.black);
-		insultButton.setForeground(Color.white);
-		insultButton.setFont(buttonFont);
-		insultButton.addActionListener(handlers.get(2));
-		insultButton.setActionCommand("Exit");
-		insultButton.setPreferredSize(new Dimension(150, 36));
-		insultButton.setFocusPainted(false);
 		
 		ButtonPanel.add(attackButton);
 		ButtonPanel.add(spellsButton);
-		ButtonPanel.add(drinkButton);
-		ButtonPanel.add(complimentButton);
-		ButtonPanel.add(insultButton);
 		
 		window.add(HPPanel);
 		window.add(MPPanel);
 		window.add(DescPanel);
 		window.add(ButtonPanel);
-		window.add(ColaPanel);
 		window.add(EnemyPanel);
-		window.add(MoralPanel);
 		
 		window.setVisible(true);
 

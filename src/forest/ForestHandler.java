@@ -26,7 +26,7 @@ public class ForestHandler implements ActionListener{
 		case "C1": ngvmMain.ChangeText("You looks around and hear some weird fizzing sounds and decide to investigate.", "C2"); break;
 		case "C2": ngvmMain.ChangeText("When you get closer suddenly...", "C3"); break;
 		case "C3": ngvmMain.ChangeText("The fizzing attacks!", "C4"); break;
-		case "C4": ngvmMain.hide(); bvmMain.enterBattleTutorial("Tutorial", fmon.tutorialMonster()); break;
+		case "C4": ngvmMain.hide(); bvmMain.enterBattle("Tutorial", fmon.demoMonster()); break;
 		default: break;
 		}
 	}
