@@ -1,3 +1,8 @@
+# Patch Notes ALPHA V0.3
+- Finished tutorial Game GUI Section
+- Implemented battle GUI
+- Cleaned and removed redundent and outdated files
+
 # Patch Notes ALPHA V0.2
 - Finished starting area of forest with decision making and inputs availiable
 
