@@ -100,7 +100,6 @@ public class BattleVisibilityManager {
 	
 	public void spell(SpellBuilder selectedSpell) {
 		int accuracy = randomGen.nextInt(100);
-		int range = randomGen.nextInt(3);
 		int damageValue = 0;
 		
 		disableButtons();

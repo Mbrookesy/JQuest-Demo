@@ -9,9 +9,6 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.JTextArea;
-import javax.swing.JTextPane;
-
-import src.maingame.MainHandler;
 
 public class GameGUI {
 	Font buttonFont = new Font("Courier", Font.PLAIN, 30);

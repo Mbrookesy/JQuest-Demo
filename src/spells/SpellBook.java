@@ -1,7 +1,5 @@
 package src.spells;
 
-import java.util.ArrayList;
-
 public class SpellBook {
 	
 	public SpellBuilder[] startingSpells() {

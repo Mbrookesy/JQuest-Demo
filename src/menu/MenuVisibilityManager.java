@@ -1,7 +1,5 @@
 package src.menu;
 
-import src.main.GameGUI;
-
 public class MenuVisibilityManager {
 	
 	MenuGUI menu;

@@ -4,9 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 import src.battle.BattleVisibilityManager;
-import src.main.LoadChar;
 import src.maingame.MainVisibilityManager;
-import src.mortals.MainCharacter;
 
 public class MenuHandler implements ActionListener{	
 		MenuVisibilityManager vmMain;

@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.event.ActionListener;
-import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -14,7 +13,6 @@ import javax.swing.JPanel;
 import javax.swing.JTextArea;
 
 import src.main.LoadChar;
-import src.mortals.MainCharacter;
 
 public class BattleGUI {
 	//Menu Panels
