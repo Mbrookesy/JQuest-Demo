@@ -1,9 +1,9 @@
 # JQUEST
-JQuest is a simple turn based rpg featuring the adventures of a man named Jordan with a Cola addiction.
+JQuest is a little demo rpg made solely on Java swing. Intended to be a little prototype for a much bigger project which will most likely be done using a game engine like Unity via C#.
 
-# Patch Notes ALPHA V0.3
-- Finished tutorial Game GUI Section
-- Implemented battle GUI
-- Cleaned and removed redundent and outdated files
+# Patch Notes ALPHA FINAL V0.4
+- Finished simplistic battle mechanics
+- Implemented spells section
+- Demo completed
 
 See previous patch notes here: https://github.com/Mbrookesy/JQuest/blob/master/PreviousPatches.md
